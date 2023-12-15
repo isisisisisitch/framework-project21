@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function test() {
+           // document.getElementsByTagName('div')[0].remove();
+            //document.getElementsByClassName('div100')[0].remove();
+            document.querySelectorAll('div')[1].remove();
+        }
+
+
+    </script>
+</head>
+<body>
+
+<div >
+    <ul>
+        <li id="li1">abc</li>
+        <li>def</li>
+        <li>ghi</li>
+
+    </ul>
+</div>
+
+<div>
+    <ul>
+        <li >abc2</li>
+        <li>def2</li>
+        <li>ghi2</li>
+
+    </ul>
+</div>
+
+<button onclick="test()">Click me</button>
+
+</body>
+</html>

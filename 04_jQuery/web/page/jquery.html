@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+
+<div>
+    <span>span1</span>
+</div>
+<div>
+    <span>span2</span>
+</div>
+<div>
+    <span>span3</span>
+</div>
+
+
+<h2>Greetings</h2>
+<div class="container">
+    <div class="inner">Hello</div>
+    <div class="inner">Goodbye</div>
+</div>
+
+<button >Click me</button>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+
+<script>
+    $('button').click(() => {
+        alert("click me!")
+    });
+
+    // $('button').on('click',function(){
+    //     alert("click me!")
+    // })
+
+    // document.querySelector('button').onclick=function(){
+    //     alert("click me!")
+    // }
+
+    // $( ".inner" ).append( "<p>Test</p>" );
+
+    // $('div span').remove()
+
+    // $(function(){
+            //利用$()函数找到的节点，是jQuery包装后的节点，不是js原生dom节点
+    //     $('div span').remove()
+    // });
+
+    // window.onload = function(){
+    //     $('div span').remove()
+    // }
+    //  document.querySelector('div span').remove()
+</script>
+</body>
+</html>

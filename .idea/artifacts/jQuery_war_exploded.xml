@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jQuery:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/jQuery_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="04_jQuery/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="04_jQuery" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

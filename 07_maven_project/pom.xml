@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--    pom版本，必要元素-->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--    组织名称，公司域名倒写-->
+    <groupId>ca.bytetube</groupId>
+    <!--   项目名称-->
+    <artifactId>07_maven_project</artifactId>
+
+    <!--    版本号-->
+    <version>1.0-SNAPSHOT</version>
+    <!--    打包方式-->
+    <packaging>war</packaging>
+    <!--    属性信息，文本编码，maven jdk版本-->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!--    依赖信息-->
+    <dependencies>
+
+    </dependencies>
+
+    <!--    构建信息，插件的配置信息-->
+    <build>
+    </build>
+
+
+</project>

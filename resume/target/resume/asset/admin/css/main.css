@@ -1,0 +1,231 @@
+.form-control {
+    background: none;
+}
+
+.form-validation input[type=file] {
+    display: inline-block;
+}
+
+#leftsidebar .user-info {
+    display: flex;
+    height: auto;
+}
+
+#leftsidebar .user-info .info-container {
+    top: 0;
+    width: 100%;
+}
+
+#leftsidebar .user-info .image img {
+    width: 48px;
+    height: 48px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    overflow-y: visible;
+}
+
+.table-responsive .table th,
+.table-responsive .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-responsive .table td button {
+    margin: 0 5px;
+}
+
+.table-responsive .menus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.table-responsive .menus .buttons {
+    margin-bottom: 20px;
+}
+
+.table-responsive .menus .removeAll {
+    margin-left: 15px;
+}
+
+.page-size {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.page-size select {
+    margin: 0 10px;
+}
+
+.page-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.page-box .pagination {
+    margin: 0;
+}
+
+.error-title {
+    font-size: 80px;
+}
+
+.error-msg {
+    font-size: 27px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: auto;
+}
+
+.search-box button {
+    margin-top: -25px;
+}
+
+.search-box .input-group-addon {
+    padding: 0;
+    margin-right: 10px;
+    margin-top: -20px;
+}
+
+.search-box .form-line {
+    margin: 0 15px 25px;
+}
+
+.search-box .keyword {
+    width: 150px;
+}
+
+.search-box .input {
+    width: 100px;
+}
+
+.search-box .datetime-input {
+    width: 150px;
+}
+
+.search-box select {
+    height: 25px;
+    position: relative;
+    top: -11px;
+    margin-right: 15px;
+}
+
+.form-group select {
+    position: relative;
+    top: 5px;
+    height: 25px;
+}
+
+.fileinput  {
+    position: relative;
+}
+
+.fileinput .clear {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.fileinput input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 9;
+}
+
+.form-validation .captcha .form-line {
+    width: 80px;
+}
+
+.form-validation .captcha img {
+    width: 100px;
+    height: 35px;
+    margin-left: 15px;
+    position: relative;
+    top: -15px;
+    cursor: pointer;
+}
+
+.signup-page, .login-page {
+    margin: 50px auto;
+}
+
+[type="checkbox"]+label {
+    font-size: 14px;
+}
+
+.logo small,
+.form-group .form-line.focused .form-label {
+    font-size: 13px;
+}
+
+.fileinput,
+.fileinput-new.thumbnail {
+    margin-bottom: 0;
+}
+
+.fileinput input {
+    cursor: pointer;
+}
+
+.bootstrap-tagsinput {
+    width: 100%;
+    padding-left: 0;
+}
+
+.bootstrap-tagsinput .tag {
+    font-size: 14px;
+    background-color: #2196f3;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.bootstrap-tagsinput input {
+    padding: 0;
+    width: 100%;
+}
+
+#leftsidebar {
+    width: 220px;
+}
+
+section.content {
+    margin-left: 235px;
+}
+
+.fileinput-new.thumbnail img {
+    max-width: 200px;
+    max-height: 140px;
+}
+
+.fileinput-preview.thumbnail {
+    max-width: 210px;
+    max-height: 150px;
+    margin-bottom: 0;
+}
+
+td img {
+    height: 50px;
+    width: auto;
+}

@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ByteTube resume management-project experience</title>
+    <link rel="icon" href="../../asset/admin/img/favicon.png" type="image/x-icon">
+    <link href="../../asset/plugin/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../../asset/plugin/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet">
+    <link href="../../asset/plugin/node-waves/waves.css" rel="stylesheet">
+    <link href="../../asset/plugin/animate-css/animate.min.css" rel="stylesheet">
+    <link href="../../asset/admin/css/material-icons.css" rel="stylesheet">
+    <link href="../../asset/admin/css/style.min.css" rel="stylesheet">
+    <link href="../../asset/admin/css/theme-blue.min.css" rel="stylesheet">
+    <link href="../../asset/admin/css/main.css" rel="stylesheet">
+</head>
+
+<body class="theme-blue">
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="Search">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="#">ByteTube resume management</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Call Search -->
+                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                    <!-- #END# Tasks -->
+                    <li><a href="javascript:void(0);" data-close="true"><i class="material-icons">more_vert</i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="image">
+                    <img src="../../asset/admin/img/avatar.png" alt="User">
+                </div>
+                <div class="info-container">
+                    <div class="name">Dal</div>
+                    <div class="email">ByteTube | lecturer</div>
+                    <div class="btn-group user-helper-dropdown">
+                        <i class="material-icons" data-toggle="dropdown">keyboard_arrow_down</i>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="../front/user.html"><i class="material-icons">person</i>person info</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="../login.html"><i class="material-icons">input</i>exit</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- #User Info -->
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li>
+                        <a href="user.html">
+                            <i class="material-icons">person</i>
+                            <span>person info</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="skill.html">
+                            <i class="material-icons">accessibility</i>
+                            <span>skill</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="password.html">
+                            <i class="material-icons">lock</i>
+                            <span>change password</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="education.html">
+                            <i class="material-icons">school</i>
+                            <span>education experience</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="company.html">
+                            <i class="material-icons">domain</i>
+                            <span>company</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="experience.html">
+                            <i class="material-icons">work</i>
+                            <span>work experience</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="project.html">
+                            <i class="material-icons">build</i>
+                            <span>project experience</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="award.html">
+                            <i class="material-icons">plus_one</i>
+                            <span>award</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <i class="material-icons">comment</i>
+                            <span>contact</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="website.html">
+                            <i class="material-icons">language</i>
+                            <span>website</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- #Menu -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>project experience</h2>
+                        </div>
+                        <div class="body table-responsive">
+                            <div class="menus">
+                                <div class="buttons">
+                                    <button type="button" class="btn bg-blue waves-effect btn-sm"
+                                            data-toggle="modal" data-target="#add-form-box">
+                                        <i class="material-icons">add</i>
+                                        <span>add </span>
+                                    </button>
+                                    <button type="button"
+                                            class="btn bg-pink waves-effect btn-sm removeAll disabled"
+                                            disabled
+                                            onclick="removeAll()">
+                                        <i class="material-icons">delete</i>
+                                        <span>del</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        <div class="switch">
+                                            <label><input type="checkbox"><span class="lever switch-col-blue"></span></label>
+                                        </div>
+                                    </th>
+                                    <th>name</th>
+                                    <th>company</th>
+                                    <th>start</th>
+                                    <th>end</th>
+                                    <th>intro</th>
+                                    <th>operation</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="switch">
+                                            <label><input type="checkbox"><span class="lever switch-col-blue"></span></label>
+                                        </div>
+                                    </td>
+                                    <td><a href="#" target="_blank">project</a></td>
+                                    <td><a href="#" target="_blank">XXcompany</a></td>
+                                    <td>2011-09-09</td>
+                                    <td>2014-08-08</td>
+                                    <td>XXX</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue waves-effect btn-xs"
+                                                onclick="edit()">
+                                            <i class="material-icons">edit</i>
+                                            <span>edit</span>
+                                        </button>
+                                        <button type="button" class="btn bg-pink waves-effect btn-xs"
+                                                onclick="remove('project')">
+                                            <i class="material-icons">delete</i>
+                                            <span>del</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="switch">
+                                            <label><input type="checkbox"><span class="lever switch-col-blue"></span></label>
+                                        </div>
+                                    </td>
+                                    <td><a href="#" target="_blank">project</a></td>
+                                    <td><a href="#" target="_blank">XXcompany</a></td>
+                                    <td>2011-09-09</td>
+                                    <td>2014-08-08</td>
+                                    <td>XXX</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue waves-effect btn-xs"
+                                                onclick="edit()">
+                                            <i class="material-icons">edit</i>
+                                            <span>edit</span>
+                                        </button>
+                                        <button type="button" class="btn bg-pink waves-effect btn-xs"
+                                                onclick="remove('project')">
+                                            <i class="material-icons">delete</i>
+                                            <span>del</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="switch">
+                                            <label><input type="checkbox"><span class="lever switch-col-blue"></span></label>
+                                        </div>
+                                    </td>
+                                    <td><a href="#" target="_blank">project</a></td>
+                                    <td><a href="#" target="_blank">XXcompany</a></td>
+                                    <td>2011-09-09</td>
+                                    <td>2014-08-08</td>
+                                    <td>XXX</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue waves-effect btn-xs"
+                                                onclick="edit()">
+                                            <i class="material-icons">edit</i>
+                                            <span>edit</span>
+                                        </button>
+                                        <button type="button" class="btn bg-pink waves-effect btn-xs"
+                                                onclick="remove('project')">
+                                            <i class="material-icons">delete</i>
+                                            <span>del</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  add-form-box  -->
+    <div class="modal fade" id="add-form-box" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">add project</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-validation" method="post">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
+                                <label for="name">name</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text" id="name" name="name" maxlength="20" class="form-control"
+                                               placeholder="name" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
+                                <label>picture</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+                                <div class="form-group">
+                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                                        <div class="fileinput-new thumbnail">
+                                            <img src="../../asset/admin/img/noimage.png" alt="">
+                                        </div>
+                                        <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                        <i class="material-icons clear fileinput-exists" data-dismiss="fileinput">close</i>
+                                        <input type="file" name="image" accept="image/*">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
+                                <label>company</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+                                <div class="form-group">
+                                    <select name="company">
+                                        <option value="1">Google</option>
+                                        <option value="2">Meta</option>
+                                        <option value="3">MS</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
+                                <label for="website">website</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="url" id="website" name="website" maxlength="50" class="form-control"
+                                               placeholder="website">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
+                                <label for="beginDay">start</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="date" id="beginDay" name="beginDay" class="form-control"
+                                               required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
+                                <label for="endDay">end</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="date" id="endDay" name="endDay" class="form-control"
+                                               required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
+                                <label for="intro">intro</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <textarea name="intro" maxlength="1000" id="intro" cols="30" rows="5" class="form-control no-resize" placeholder="intro"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-3 col-xs-offset-3">
+                                <button class="btn btn-primary waves-effect m-l-15" type="submit">save</button>
+                                <button class="btn btn-info waves-effect m-l-15" data-dismiss="modal">close</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../asset/plugin/jquery/jquery.min.js"></script>
+    <script src="../../asset/plugin/bootstrap/bootstrap.min.js"></script>
+    <script src="../../asset/plugin/bootstrap-fileinput/bootstrap-fileinput.js"></script>
+    <script src="../../asset/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <script src="../../asset/plugin/node-waves/waves.js"></script>
+    <script src="../../asset/plugin/jquery-validation/jquery.validate.js"></script>
+    <script src="../../asset/plugin/jquery-validation/messages_zh.js"></script>
+    <script src="../../asset/plugin/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="../../asset/admin/js/default.js"></script>
+    <script src="../../asset/admin/js/main.js"></script>
+    <script>
+        addValidatorRules('.form-validation')
+
+        function edit() {
+            $('#add-form-box').modal()
+        }
+
+        function remove(name) {
+            swal({
+                title: "are you sure？",
+                text: 'sure to del【' + name + '】？',
+                icon: 'warning',
+                dangerMode: true,
+                buttons: {
+                    cancel: 'cancel',
+                    confirm: 'confirm'
+                }
+            }).then(willDelete => {
+                if (!willDelete) return
+                swal({
+                    title: 'del successfully',
+                    text: '【' + name + '】deleted！',
+                    icon: 'success',
+                    timer: 1500,
+                    buttons: false
+                })
+            })
+        }
+
+        function removeAll() {
+            swal({
+                title: "are you sure？",
+                text: "sure to del all the records？",
+                icon: "warning",
+                dangerMode: true,
+                buttons: {
+                    cancel: "cancel",
+                    confirm: "confirm"
+                }
+            }).then(willDelete => {
+                if (!willDelete) return
+                swal({
+                    title: "del successfully",
+                    text: "all records deleted！",
+                    icon: "success",
+                    timer: 1500,
+                    buttons: false
+                })
+            })
+        }
+
+        const $set = $(".table tbody tr input[type=checkbox]")
+        const $removeAll = $('.table-responsive .removeAll')
+        $('.table thead th input[type=checkbox]').change(function () {
+            let checked = $(this).is(":checked")
+            if (checked) {
+                $set.each(function () {
+                    $(this).prop("checked", true)
+                    $(this).parents('tr').addClass("active")
+                })
+                $removeAll.removeClass('disabled')
+                $removeAll.prop('disabled', false)
+            } else {
+                $set.each(function () {
+                    $(this).prop("checked", false)
+                    $(this).parents('tr').removeClass("active")
+                })
+                $removeAll.addClass('disabled')
+                $removeAll.prop('disabled', true)
+            }
+        })
+
+        $set.change(function () {
+            $(this).parents('tr').toggleClass("active")
+            if ($('.table tbody tr input[type=checkbox]:checked').length > 0) {
+                $removeAll.removeClass('disabled')
+                $removeAll.prop('disabled', false)
+            } else {
+                $removeAll.addClass('disabled')
+                $removeAll.prop('disabled', true)
+            }
+        })
+    </script>
+</body>
+
+</html>

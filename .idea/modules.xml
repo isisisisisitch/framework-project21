@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01_tomcat_servlet/01_tomcat_servlet.iml" filepath="$PROJECT_DIR$/01_tomcat_servlet/01_tomcat_servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_crm/02_crm.iml" filepath="$PROJECT_DIR$/02_crm/02_crm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_js/03_js.iml" filepath="$PROJECT_DIR$/03_js/03_js.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_jQuery/04_jQuery.iml" filepath="$PROJECT_DIR$/04_jQuery/04_jQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_maven_jdbc/05_maven_jdbc.iml" filepath="$PROJECT_DIR$/05_maven_jdbc/05_maven_jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_maven_web/06_maven_web.iml" filepath="$PROJECT_DIR$/06_maven_web/06_maven_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_packageproject/08_packageproject.iml" filepath="$PROJECT_DIR$/08_packageproject/08_packageproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_maven_package/09_maven_package.iml" filepath="$PROJECT_DIR$/09_maven_package/09_maven_package.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_packageproject/09_packageproject.iml" filepath="$PROJECT_DIR$/09_packageproject/09_packageproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resume/resume.iml" filepath="$PROJECT_DIR$/resume/resume.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/06_maven_web" />
+    <file type="web" url="file://$PROJECT_DIR$/07_maven_project" />
+    <file type="web" url="file://$PROJECT_DIR$/resume" />
+    <file type="web" url="file://$PROJECT_DIR$/webappTest" />
+    <file type="web" url="file://$PROJECT_DIR$/../../xr2" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/maven_jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/_06_maven_web/pom.xml" />
+        <option value="$PROJECT_DIR$/_07_maven_project/pom.xml" />
+        <option value="$PROJECT_DIR$/09_maven_package/pom.xml" />
+        <option value="$PROJECT_DIR$/resume/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
