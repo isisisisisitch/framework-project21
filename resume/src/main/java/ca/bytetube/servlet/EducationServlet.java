@@ -4,6 +4,7 @@ import ca.bytetube.bean.Education;
 import ca.bytetube.beans.util.Beans;
 import ca.bytetube.service.EducationService;
 import ca.bytetube.service.impl.EducationServiceImpl;
+import org.apache.commons.beanutils.BeanUtils;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +19,8 @@ public class EducationServlet extends BaseServlet {
     public void save(HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         Education education = Beans.convert(request.getParameterMap(), Education.class);
+//        Education education = new Education();
+//        BeanUtils.populate(education,request.getParameterMap());
         if (service.save(education)) {
             redirect( "education/admin", request, response);
         } else {

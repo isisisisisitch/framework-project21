@@ -8,7 +8,7 @@
 </head>
 
 <body class="theme-blue">
-
+<%@ include file="common/nav.jsp" %>
 
 <section class="content">
     <div class="container-fluid">

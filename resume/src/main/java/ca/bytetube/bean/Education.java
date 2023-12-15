@@ -11,9 +11,10 @@ public class Education extends DateBean {
     @JsonIgnore
     public String getTypeString() {
         switch (type) {
-            case 1: return "Bachelor";
-            case 2: return "Master";
-            case 3: return "PhD";
+            case 1: return "College";
+            case 2: return "Bachelor";
+            case 3: return "Master";
+            case 4: return "PhD";
             default: return "Others";
         }
     }
