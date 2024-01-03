@@ -12,7 +12,7 @@
     <div class="error-title">something is wrong</div>
     <div class="error-msg">${error}</div>
     <div class="button-place">
-        <a href="${ctx}" class="btn btn-default btn-lg waves-effect">back to home</a>
+        <a href="${ctx}" class="btn btn-default btn-lg waves-effect">back home</a>
     </div>
 </div>
 </body>

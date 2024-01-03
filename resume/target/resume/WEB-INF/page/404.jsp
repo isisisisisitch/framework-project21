@@ -12,7 +12,7 @@
     <div class="error-code">404</div>
     <div class="error-message">can not find this page...</div>
     <div class="button-place">
-        <a href="${ctx}" class="btn btn-default btn-lg waves-effect">回到首页</a>
+        <a href="${ctx}" class="btn btn-default btn-lg waves-effect">back home</a>
     </div>
 </div>
 </body>
