@@ -16,7 +16,7 @@ public class WebsiteServlet extends BaseServlet {
     private static final WebsiteService service = new WebsiteServiceImpl();
 
     public void admin(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        System.out.println("website - admin");
+        //System.out.println("website - admin");
         List<Website> websites = service.find();
         if (websites.size() > 0) {
             request.setAttribute("website", websites.get(0));
@@ -27,8 +27,7 @@ public class WebsiteServlet extends BaseServlet {
 
 
     public void save(HttpServletRequest request, HttpServletResponse response) throws Exception{
-        Website website = new Website();
-        BeanUtils.populate(website,request.getParameterMap());
+        Website website = Beans.convert(request.getParameterMap(), Website.class);
         if (service.save(website)) {
             response.sendRedirect(request.getContextPath()+"/website/admin");
         }else {
