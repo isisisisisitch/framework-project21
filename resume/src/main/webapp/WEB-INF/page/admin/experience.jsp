@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ByteTube resume management - company</title>
+    <title>ByteTube resume management - experience</title>
     <%@ include file="common/head.jsp" %>
 </head>
 
@@ -16,7 +16,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>company info</h2>
+                            <h2>experience</h2>
                         </div>
                         <div class="body table-responsive">
                             <div class="menus">
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
 
-                            <c:if test="${not empty companies}">
+                            <c:if test="${not empty experiences}">
                                 <table class="table table-bordered table-hover table-striped">
                                     <thead>
                                     <tr>
@@ -45,46 +45,39 @@
                                                 <label><input type="checkbox"><span class="lever switch-col-blue"></span></label>
                                             </div>
                                         </th>
-                                        <th>name</th>
-                                        <th>logo</th>
+                                        <th>job</th>
+                                        <th>company</th>
+                                        <th>start</th>
+                                        <th>end</th>
                                         <th>intro</th>
                                         <th>operation</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <form id="remove-form" action="${ctx}/company/remove" method="post">
-                                        <c:forEach items="${companies}" var="company">
+                                    <form id="remove-form" action="${ctx}/experience/remove" method="post">
+                                        <c:forEach items="${experiences}" var="experience">
                                             <tr>
                                                 <td>
                                                     <div class="switch">
                                                         <label>
-                                                            <input type="checkbox" name="id" value="${company.id}">
+                                                            <input type="checkbox" name="id" value="${experience.id}">
                                                             <span class="lever switch-col-blue"></span>
                                                         </label>
                                                     </div>
                                                 </td>
-                                                <td>
-                                                    <c:choose>
-                                                        <c:when test="${empty company.website}">${company.name}</c:when>
-                                                        <c:otherwise>
-                                                            <a href="${company.website}" target="_blank">${company.name}</a>
-                                                        </c:otherwise>
-                                                    </c:choose>
-                                                </td>
-                                                <td>
-                                                    <c:if test="${not empty company.logo}">
-                                                        <img src="${ctx}/${company.logo}">
-                                                    </c:if>
-                                                </td>
-                                                <td>${company.intro}</td>
+                                                <td>${experience.job}</td>
+                                                <td><a href="${experience.company.website}" target="_blank">${experience.company.name}</a></td>
+                                                <td>${experience.beginDayString}</td>
+                                                <td>${experience.endDayString}</td>
+                                                <td>${experience.intro}</td>
                                                 <td>
                                                     <button type="button" class="btn bg-blue waves-effect btn-xs"
-                                                            onclick="edit(${company.json})">
+                                                            onclick="edit(${experience.json})">
                                                         <i class="material-icons">edit</i>
                                                         <span>edit</span>
                                                     </button>
                                                     <button type="button" class="btn bg-pink waves-effect btn-xs"
-                                                            onclick="remove('${company.id}', '${company.name}', this)">
+                                                            onclick="remove('${experience.id}', '${experience.job}', this)">
                                                         <i class="material-icons">delete</i>
                                                         <span>delete</span>
                                                     </button>
@@ -107,38 +100,34 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">add company info</h4>
+                    <h4 class="modal-title">add experience</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-validation" method="post" action="${ctx}/company/save" enctype="multipart/form-data">
-                        <input style="display: none" name="id">
-                        <input style="display: none" name="logo">
+                    <form class="form-validation" method="post" action="${ctx}/experience/save">
+                        <input type="text" style="display: none" name="id">
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
-                                <label>Logo</label>
+                                <label>company</label>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
                                 <div class="form-group">
-                                    <div class="fileinput fileinput-new" data-provides="fileinput">
-                                        <div class="fileinput-new thumbnail">
-                                            <img src="${adminAsset}/img/noimage.png" alt="">
-                                        </div>
-                                        <div class="fileinput-preview fileinput-exists thumbnail"></div>
-                                        <i class="material-icons clear fileinput-exists" data-dismiss="fileinput">close</i>
-                                        <input type="file" name="logoFile" accept="image/*">
-                                    </div>
+                                    <select name="company.id" required>
+                                        <c:forEach items="${companies}" var="company">
+                                            <option value="${company.id}">${company.name}</option>
+                                        </c:forEach>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
-                                <label for="name">name</label>
+                                <label for="job">job</label>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" maxlength="20" class="form-control"
-                                               placeholder="company name"
+                                        <input type="text" id="job" name="job" maxlength="20" class="form-control"
+                                               placeholder="job"
                                                required>
                                     </div>
                                 </div>
@@ -146,13 +135,26 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
-                                <label for="website">website</label>
+                                <label for="beginDay">begin</label>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="url" id="website" name="website" maxlength="50" class="form-control"
-                                               placeholder="website（start with http://、https://）">
+                                        <input type="date" id="beginDay" name="beginDay" class="form-control"
+                                               required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
+                                <label for="endDay">end</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="date" id="endDay" name="endDay" class="form-control"
+                                               required>
                                     </div>
                                 </div>
                             </div>
@@ -188,26 +190,16 @@
 
         const $formBox = $('#add-form-box')
         const $form = $formBox.find('form')
-        const $img = $form.find('.thumbnail img')
-
         function add() {
             $($form)[0].reset()
             $formBox.modal()
-            $img.attr('src', '${adminAsset}/img/noimage.png')
         }
 
         function edit(bean) {
-            add()
-
             for (const key in bean) {
-                const $input = $form.find('[name=' + key + ']')
-                if ($input.attr('type') === 'file') continue
-                $input.val(bean[key])
+                $form.find('[name="' + key + '"]').val(bean[key])
             }
-
-            if (bean.logo) {
-                $img.attr('src', '${ctx}/' + bean.logo)
-            }
+            $formBox.modal()
         }
 
         function remove(id, name, btn) {
