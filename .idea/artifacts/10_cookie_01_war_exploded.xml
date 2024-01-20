@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="10_cookie_01:war exploded">
+    <output-path>$PROJECT_DIR$/10_cookie_01/target/cookie_01</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>10_cookie_01</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="10_cookie_01" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/10_cookie_01/target/cookie_01/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="10_cookie_01/web/Web" />
+    </root>
+  </artifact>
+</component>
