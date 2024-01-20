@@ -33,16 +33,15 @@
                             <input id="originPassword" type="password" class="form-control" maxlength="20" placeholder="password" required>
                         </div>
                     </div>
-<%--                    </div>--%>
-<%--                    <div class="input-group form-group captcha">--%>
-<%--                        <span class="input-group-addon">--%>
-<%--                            <i class="material-icons">security</i>--%>
-<%--                        </span>--%>
-<%--                        <div class="form-line">--%>
-<%--                            <input type="text" class="form-control" name="captcha" placeholder="captcha" required>--%>
-<%--                        </div>--%>
-<%--                        <img id="captcha" src="${ctx}/user/captcha" alt="captcha">--%>
-<%--                    </div>--%>
+                    <div class="input-group form-group captcha">
+                        <span class="input-group-addon">
+                            <i class="material-icons">security</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="captcha" placeholder="captcha" required>
+                        </div>
+                        <img id="captcha" src="${ctx}/user/captcha" alt="captcha">
+                    </div>
                     <div class="row">
                         <div class="col-xs-8 p-t-5">
                             <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-pink">
@@ -65,9 +64,9 @@
             return true
         })
 
-        <%--$('#captcha').click(function () {--%>
-        <%--    $(this).hide().attr('src', '${ctx}/user/captcha?time=' + new Date().getTime()).fadeIn()--%>
-        <%--})--%>
+        $('#captcha').click(function () {
+            $(this).hide().attr('src', '${ctx}/user/captcha?time=' + new Date().getTime()).fadeIn()
+        })
     </script>
 </body>
 
