@@ -47,48 +47,48 @@ public class UserServlet extends BaseServlet {
         User user = Beans.convert(request.getParameterMap(), User.class);
         user = service.find(user);
         if (user != null) {
+            request.getSession().setAttribute("user",user);
             redirect("user/admin", request, response);
         } else {
             forwardError("username or password is wrong", request, response);
         }
     }
 
-//    public void editPassword(HttpServletRequest request, HttpServletResponse response)
-//            throws Exception {
-//        request.setAttribute("menu", "password");
-//        forward("admin/password.jsp", request, response);
-//    }
-//
-//    public void updatePassword(HttpServletRequest request, HttpServletResponse response)
-//            throws Exception {
-//        User user = (User) request.getSession().getAttribute("user");
-//        String originPassword = user.getPassword();
-//        String oldPassword = request.getParameter("oldPassword");
-//        if (originPassword.equals(oldPassword)) {
-//            user.setPassword(request.getParameter("password"));
-//            if (service.save(user)) {
-//                logout(request, response);
-//            } else {
-//                user.setPassword(originPassword);
-//                forwardError("update password failed", request, response);
-//            }
-//        } else {
-//            forwardError("old password is wrong", request, response);
-//        }
-//    }
+    public void editPassword(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        request.setAttribute("menu", "password");
+        forward("admin/password.jsp", request, response);
+    }
 
-//    public void logout(HttpServletRequest request, HttpServletResponse response)
-//            throws Exception {
-//        request.getSession().removeAttribute("user");
-//        redirect("page/login.jsp", request, response);
-//    }
+    public void updatePassword(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        User user = (User) request.getSession().getAttribute("user");
+        String originPassword = user.getPassword();
+        String oldPassword = request.getParameter("oldPassword");
+        if (originPassword.equals(oldPassword)) {
+            String newPassword = request.getParameter("password");
+            user.setPassword(newPassword);
+            if (service.save(user)) {
+                logout(request, response);
+            } else {
+                user.setPassword(originPassword);
+                forwardError("update password failed", request, response);
+            }
+        } else {
+            forwardError("old password is wrong", request, response);
+        }
+    }
+
+    public void logout(HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+        request.getSession().removeAttribute("user");
+        redirect("page/login.jsp", request, response);
+    }
 
     public void admin(HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         User user = service.find().get(0);
         request.setAttribute("user", user);
         request.setAttribute("menu", "user");
-        //request.getSession().setAttribute("user", user);
+        request.getSession().setAttribute("user", user);
         forward("admin/user.jsp", request, response);
     }
 
