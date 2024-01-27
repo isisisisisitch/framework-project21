@@ -47,7 +47,7 @@ public class UserServlet extends BaseServlet {
         User user = Beans.convert(request.getParameterMap(), User.class);
         user = service.find(user);
         if (user != null) {
-            request.getSession().setAttribute("user",user);
+            request.getSession().setAttribute("user", user);
             redirect("user/admin", request, response);
         } else {
             forwardError("username or password is wrong", request, response);
@@ -137,4 +137,17 @@ public class UserServlet extends BaseServlet {
         // 将图片数据写会到客户端
         ImageIO.write(image, "jpg", response.getOutputStream());
     }
+
+    public void front(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        User user = service.find().get(0);
+        request.setAttribute("user", user);
+        request.getSession().setAttribute("user", user);
+        List<Website> websites = websiteService.find();
+        if (websites.size() > 0) request.setAttribute("website", websites.get(0));
+        request.setAttribute("skills", skillService.find());
+        request.setAttribute("awards", awardService.find());
+
+        forward("front/user.jsp", request, response);
+    }
+
 }
