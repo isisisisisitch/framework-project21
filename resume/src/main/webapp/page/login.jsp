@@ -1,6 +1,6 @@
 ﻿<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <title>ByteTube resume management - login</title>
     <%@ include file="../WEB-INF/page/admin/common/head.jsp" %>

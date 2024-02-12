@@ -26,8 +26,8 @@
                                 class="crt-icon crt-icon-wrench"></span></a></li>
                         <li><a href="${ctx}/contact/front" data-tooltip="contact me"><span
                                 class="crt-icon crt-icon-contact"></span></a></li>
-                        <li><a href="${ctx}/user/admin" data-tooltip="admin"><span
-                                class="crt-icon crt-icon-key"></span></a></li>
+<%--                        <li><a href="${ctx}/user/admin" data-tooltip="admin"><span--%>
+<%--                                class="crt-icon crt-icon-key"></span></a></li>--%>
                     </ul>
                 </nav>
             </div>

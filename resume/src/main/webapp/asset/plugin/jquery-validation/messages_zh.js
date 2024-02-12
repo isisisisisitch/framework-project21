@@ -10,27 +10,26 @@
 
 /*
  * Translated default messages for the jQuery validation plugin.
- * Locale: ZH (Chinese, 中文 (Zhōngwén), 汉语, 漢語)
  */
 $.extend( $.validator.messages, {
-	required: "这是必填字段",
-	remote: "请修正此字段",
-	email: "请输入有效的电子邮件地址",
-	url: "请输入有效的网址",
-	date: "请输入有效的日期",
-	dateISO: "请输入有效的日期 (YYYY-MM-DD)",
-	number: "请输入有效的数字",
-	digits: "只能输入数字",
-	creditcard: "请输入有效的信用卡号码",
-	equalTo: "你的输入不相同",
-	extension: "请输入有效的后缀",
-	maxlength: $.validator.format( "最多可以输入 {0} 个字符" ),
-	minlength: $.validator.format( "最少要输入 {0} 个字符" ),
-	rangelength: $.validator.format( "请输入长度在 {0} 到 {1} 之间的字符串" ),
-	range: $.validator.format( "请输入范围在 {0} 到 {1} 之间的数值" ),
-	max: $.validator.format( "请输入不大于 {0} 的数值" ),
-	min: $.validator.format( "请输入不小于 {0} 的数值" ),
-	step: $.validator.format( "请注意精度：{0}" )
+	required: "This is a required field",
+	remote: "Please fix this field",
+	email: "Please enter a valid email address",
+	url: "Please enter a valid URL",
+	date: "Please enter a valid date",
+	dateISO: "Please enter a valid date (YYYY-MM-DD)",
+	number: "Please enter a valid number",
+	digits: "Enter numbers only",
+	creditcard: "Please enter a valid credit card number",
+	equalTo: "Your input is different",
+	extension: "Please enter a valid suffix",
+	maxlength: $.validator.format( "You can enter a maximum of {0} characters" ),
+	minlength: $.validator.format( "At least {0} characters must be entered" ),
+	rangelength: $.validator.format( "Please enter a string of length between {0} and {1}" ),
+	range: $.validator.format( "Please enter a value ranging from {0} to {1}" ),
+	max: $.validator.format( "Please enter a value no greater than {0}" ),
+	min: $.validator.format( "Please enter a value no less than {0}" ),
+	step: $.validator.format( "Please note the accuracy: {0}" )
 } );
 
 }));
