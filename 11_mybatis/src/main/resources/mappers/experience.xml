@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="experience">
+    <resultMap id="rmExperience" type="ca.bytetube.bean.Experience">
+        <result property="company.id" column="t2_id"></result>
+        <result property="company.name" column="t2_name"></result>
+        <result property="company.logo" column="t2_logo"></result>
+        <result property="company.website" column="t2_website"></result>
+        <result property="company.intro" column="t2_intro"></result>
+    </resultMap>
+
+    <select id="list" resultMap="rmExperience">
+        SELECT
+        t1.*,
+        t2.id t2_id,
+        t2.name t2_name,
+        t2.logo t2_logo,
+        t2.website t2_website,
+        t2.intro t2_intro
+        FROM
+        experience t1 JOIN
+        company t2
+        ON
+        t1.company_id = t2.id;
+    </select>
+
+
+</mapper>

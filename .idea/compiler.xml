@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="resume" />
         <module name="10_cookie_01" />
         <module name="09_maven_package" />
-        <module name="05_maven_jdbc" />
         <module name="06_maven_web" />
+        <module name="11_mybatis" />
+        <module name="resume" />
+        <module name="05_maven_jdbc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
       <module name="07_maven_project" target="1.5" />
       <module name="09_maven_package" target="1.5" />
       <module name="10_cookie_01" target="8" />
+      <module name="11_mybatis" target="8" />
       <module name="resume" target="8" />
       <module name="webappTest" target="1.5" />
       <module name="xr2" target="14" />

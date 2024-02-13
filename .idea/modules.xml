@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/09_maven_package/09_maven_package.iml" filepath="$PROJECT_DIR$/09_maven_package/09_maven_package.iml" />
       <module fileurl="file://$PROJECT_DIR$/09_packageproject/09_packageproject.iml" filepath="$PROJECT_DIR$/09_packageproject/09_packageproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/10_cookie_01/10_cookie_01.iml" filepath="$PROJECT_DIR$/10_cookie_01/10_cookie_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11_mybatis/11_mybatis.iml" filepath="$PROJECT_DIR$/11_mybatis/11_mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/resume/resume.iml" filepath="$PROJECT_DIR$/resume/resume.iml" />
     </modules>
   </component>

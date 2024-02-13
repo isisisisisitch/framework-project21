@@ -4,6 +4,7 @@
     <file type="web" url="file://$PROJECT_DIR$/06_maven_web" />
     <file type="web" url="file://$PROJECT_DIR$/07_maven_project" />
     <file type="web" url="file://$PROJECT_DIR$/10_cookie_01" />
+    <file type="web" url="file://$PROJECT_DIR$/11_mybatis" />
     <file type="web" url="file://$PROJECT_DIR$/resume" />
     <file type="web" url="file://$PROJECT_DIR$/webappTest" />
     <file type="web" url="file://$PROJECT_DIR$/../../xr2" />
@@ -20,6 +21,7 @@
         <option value="$PROJECT_DIR$/09_maven_package/pom.xml" />
         <option value="$PROJECT_DIR$/resume/pom.xml" />
         <option value="$PROJECT_DIR$/10_cookie_01/pom.xml" />
+        <option value="$PROJECT_DIR$/11_mybatis/pom.xml" />
       </list>
     </option>
   </component>
