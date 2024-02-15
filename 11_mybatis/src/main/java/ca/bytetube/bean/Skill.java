@@ -8,6 +8,14 @@ public class Skill extends Bean {
 
     private Integer level;
 
+    public Skill() {
+    }
+
+    public Skill(String name, Integer level) {
+        this.name = name;
+        this.level = level;
+    }
+
     @JsonIgnore
     public String getLevelString() {
         switch (level) {

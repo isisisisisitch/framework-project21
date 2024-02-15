@@ -13,7 +13,7 @@
     </resultMap>
 
 
-    <select id="list" resultType="ca.bytetube.bean.Skill">
+    <select id="list" resultType="SkIlL">
         select * from skill
     </select>
 
@@ -25,4 +25,54 @@
     <select id="list2" resultMap="rmSkill" parameterType="Map">
         select * from skill where id > #{id} OR level > #{level}
     </select>
+
+    <select id="list3" resultMap="rmSkill" parameterType="ca.bytetube.bean.Skill">
+        select * from skill where name like #{name} and level > #{level}
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="ca.bytetube.bean.Skill">
+        insert into skill (name, level) values(#{name},#{level})
+    </insert>
+
+    <update id="update" parameterType="ca.bytetube.bean.Skill">
+        update skill set name=#{name},level = #{level}
+        where id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        delete from skill
+        where id=#{id}
+    </delete>
+
+    <select id="dynamicSQL" resultType="ca.bytetube.bean.Skill">
+        select * from skill
+        <where>
+            <if test="id != null">
+                AND id > #{id}
+            </if>
+            <if test="name != null">
+                AND name like #{name}
+            </if>
+            <if test="level != null">
+                AND level > #{level}
+            </if>
+        </where>
+    </select>
+
+
+    <insert id="batchInsert" useGeneratedKeys="true" keyProperty="id" parameterType="list">
+        insert into skill (name, level) values
+        <foreach collection="list" item="skill"
+                 separator=",">
+            (#{skill.name},#{skill.level})
+        </foreach>
+    </insert>
+
+    <delete id="batchDelete"  parameterType="list">
+        delete  from skill where id in
+        <foreach item="id" collection="array"
+                 open="(" separator="," close=")" >
+            #{id}
+        </foreach>
+    </delete>
 </mapper>
