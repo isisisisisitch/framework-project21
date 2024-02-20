@@ -84,13 +84,18 @@
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
       <version>1.2.11</version>
+    </dependency>
 
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper</artifactId>
+      <version>5.2.0</version>
     </dependency>
 
   </dependencies>
 
   <build>
-    <finalName>resume</finalName>
+    <finalName>11_mybatis</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

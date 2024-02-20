@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="person">
+
+    <resultMap id="rmPerson" type="ca.bytetube.bean.Person">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+
+        <association property="idCard" javaType="ca.bytetube.bean.IdCard">
+            <id property="id" column="id_card_id" />
+            <result property="no" column="id_card_no" />
+            <result property="address" column="id_card_address" />
+
+        </association>
+
+        <collection property="bankCards" ofType="ca.bytetube.bean.BankCard">
+            <id property="id" column="bank_card_id" />
+            <result property="no" column="bank_card_no" />
+            <result property="amout" column="bank_card_amout" />
+        </collection>
+
+        <collection property="jobs" ofType="ca.bytetube.bean.Job">
+            <id property="id" column="job_id" />
+            <result property="name" column="job_name" />
+            <result property="duty" column="job_duty" />
+        </collection>
+
+    </resultMap>
+
+    <sql id="sqlListAll">
+
+        select
+        p.*,
+        ic.id id_card_id,
+        ic.no id_card_no,
+        ic.address id_card_address,
+        bc.id bank_card_id,
+        bc.no bank_card_no,
+        bc.amout bank_card_amout,
+        j.id job_id,
+        j.name job_name,
+        j.duty job_duty
+        from
+        person p
+        join id_card ic
+        on p.id = ic.person_id
+        left join bank_card bc on p.id = bc.person_id
+        left join person_job pj on p.id = pj.person_id
+        left join job j on j.id = pj.job_id
+    </sql>
+
+
+
+    <select id="list" resultMap="rmPerson">
+        <include refid="sqlListAll" />
+    </select>
+
+
+</mapper>

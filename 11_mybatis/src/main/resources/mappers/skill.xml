@@ -12,22 +12,29 @@
         <result property="createdTime" column="created_time"></result>
     </resultMap>
 
+    <sql id="sqlListAll">
+        select * from skill
+    </sql>
 
     <select id="list" resultType="SkIlL">
-        select * from skill
+       <include refid="sqlListAll" />
     </select>
 
     <select id="selectById" resultMap="rmSkill" parameterType="int">
-        select * from skill where id = #{id}
+        <include refid="sqlListAll" />
+
+        where id = #{id}
     </select>
 
 
     <select id="list2" resultMap="rmSkill" parameterType="Map">
-        select * from skill where id > #{id} OR level > #{level}
+        <include refid="sqlListAll" />
+        where id > #{id} OR level > #{level}
     </select>
 
     <select id="list3" resultMap="rmSkill" parameterType="ca.bytetube.bean.Skill">
-        select * from skill where name like #{name} and level > #{level}
+        <include refid="sqlListAll" />
+        where name like #{name} and level > #{level}
     </select>
 
     <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="ca.bytetube.bean.Skill">
@@ -45,7 +52,7 @@
     </delete>
 
     <select id="dynamicSQL" resultType="ca.bytetube.bean.Skill">
-        select * from skill
+        <include refid="sqlListAll" />
         <where>
             <if test="id != null">
                 AND id > #{id}

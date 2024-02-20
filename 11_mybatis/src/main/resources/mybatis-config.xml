@@ -16,6 +16,14 @@
         <typeAlias alias="druid" type="ca.bytetube.common.DruidDataSourceFactory"/>
         <package name="ca.bytetube.bean"/>
     </typeAliases>
+
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!-- true代表分页合理化：pageNo <= 0就会自动获取第1页，pageNo > pages 就会自动获取最后1页-->
+            <property name="reasonable" value="true"/>
+        </plugin>
+    </plugins>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -48,6 +56,10 @@
     <mappers>
         <mapper resource="mappers/skill.xml"/>
         <mapper resource="mappers/experience.xml"/>
+        <mapper resource="mappers/person.xml"/>
+        <mapper resource="mappers/idCard.xml"/>
+        <mapper resource="mappers/bankCard.xml"/>
+        <mapper resource="mappers/job.xml"/>
     </mappers>
 
 

@@ -1,6 +1,8 @@
 package ca.bytetube;
 
 import ca.bytetube.bean.Skill;
+import ca.bytetube.util.Mybatises;
+import com.github.pagehelper.PageHelper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -18,10 +20,21 @@ import java.util.Map;
 public class SkillTest {
 
     @Test
-    public void test10() throws IOException {
-        Reader reader = Resources.getResourceAsReader("mybatis-config.xml");
-        SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(reader);
-        SqlSession sqlSession = factory.openSession(true);
+    public void test11() {
+        SqlSession sqlSession =   Mybatises.openSession();
+        PageHelper.startPage(3,5);
+        List<Skill> list = sqlSession.selectList("skill.list");
+        for (Skill skill : list) {
+            System.out.println(skill);
+        }
+
+    }
+
+
+    @Test
+    public void test10(){
+
+        SqlSession sqlSession =   Mybatises.openSession(true);
         Integer[] ids = {33,34,35,36};
         sqlSession.delete("skill.batchDelete",ids);
 
@@ -30,10 +43,8 @@ public class SkillTest {
     }
 
     @Test
-    public void test9() throws IOException {
-        Reader reader = Resources.getResourceAsReader("mybatis-config.xml");
-        SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(reader);
-        SqlSession sqlSession = factory.openSession(true);
+    public void test9(){
+        SqlSession sqlSession =   Mybatises.openSession(true);
         List<Skill> list = new LinkedList<>();
         Skill skill1 = new Skill();
         skill1.setName("abc1");

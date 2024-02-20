@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="idCard">
+
+    <resultMap id="rmIdCard" type="ca.bytetube.bean.IdCard">
+
+        <id property="id" column="id" />
+        <id property="no" column="no" />
+        <id property="address" column="address" />
+
+        <association property="person" javaType="ca.bytetube.bean.Person">
+
+            <id property="id" column="person_id" />
+            <result property="name" column="person_name" />
+
+
+        </association>
+
+    </resultMap>
+
+    <sql id="sqlListAll">
+
+        select
+        ic.*,
+        p.id person_id,
+        p.name person_name
+        from
+        id_card ic
+
+        join  person p
+        on
+        p.id = ic.person_id;
+    </sql>
+
+
+
+    <select id="list" resultMap="rmIdCard">
+        <include refid="sqlListAll" />
+    </select>
+
+</mapper>

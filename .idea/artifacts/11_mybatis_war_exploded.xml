@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="11_mybatis:war exploded">
-    <output-path>$PROJECT_DIR$/11_mybatis/target/resume</output-path>
+    <output-path>$PROJECT_DIR$/11_mybatis/target/11_mybatis</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -36,10 +36,12 @@
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.2.11" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.2.11" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.32" />
+          <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper:5.2.0" />
+          <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:3.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/11_mybatis/target/resume/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/11_mybatis/target/11_mybatis/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="11_mybatis/web/Web" />
     </root>
